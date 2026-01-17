@@ -1,0 +1,8 @@
+moviepy
+openai-whisper
+sentence-transformers
+faiss-cpu
+transformers
+torch
+numpy
+streamlit

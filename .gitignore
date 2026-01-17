@@ -1,0 +1,5 @@
+venv/
+audio/
+embeddings/
+__pycache__/
+*.pyc
