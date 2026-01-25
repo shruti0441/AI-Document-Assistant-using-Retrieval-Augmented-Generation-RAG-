@@ -203,6 +203,7 @@ streamlit run app.py
 ## 👩‍💻 Author
 
 **Shruti Adsul**
+
 Aspiring Data Analyst | ML & LLM Enthusiast
 
 ---
