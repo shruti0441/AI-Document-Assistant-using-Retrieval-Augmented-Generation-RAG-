@@ -1,4 +1,4 @@
-
+# Phase 05 UI Part 
 import streamlit as st
 import os
 from retriever import retrieve
@@ -51,3 +51,4 @@ if st.button("Get Answer"):
                 answer = generate_answer(query, chunks)
                 st.success("Answer")
                 st.write(answer)
+
