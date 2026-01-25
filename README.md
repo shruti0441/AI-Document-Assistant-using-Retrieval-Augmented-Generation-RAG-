@@ -74,7 +74,7 @@ AI-Document-Assistant-using-RAG/
 ├── requirements.txt       # Project dependencies
 ├── setup.py               # Phase 0 : Initial project setup & environment validation
 └── README.md
----
+
 
 ---
 
