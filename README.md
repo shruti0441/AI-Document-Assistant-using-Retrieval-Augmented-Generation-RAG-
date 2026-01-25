@@ -72,13 +72,12 @@ AI-Document-Assistant-using-RAG/
 ├── rag_pipeline.py        # Phase 4: RAG (Retriever + LLM)
 ├── app.py                 # Phase 5: UI layer (Streamlit web application)
 ├── requirements.txt       # Project dependencies
-├── setup.py               # Phase 0 : Initial project setup & environment validation
+├── setup.py               # Phase 0: Initial project setup & environment validation
 └── README.md
-
-
----
+```
 
 ## ⚙️ Installation & Setup
+````
 ```bash
 # Clone repository
 git clone https://github.com/your-username/AI-Document-Assistant-using-RAG.git
@@ -213,3 +212,4 @@ If you found this project helpful:
 * ⭐ Star the repository
 * 🍴 Fork it
 * 💬 Share feedback
+
