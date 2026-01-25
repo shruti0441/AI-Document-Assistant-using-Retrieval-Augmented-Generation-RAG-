@@ -70,29 +70,11 @@ AI-Document-Assistant-using-RAG/
 ├── embed_store.py         # Phase 2: Text chunking & embedding creation
 ├── retriever.py           # Phase 3: Semantic retrieval using FAISS
 ├── rag_pipeline.py        # Phase 4: RAG (Retriever + LLM)
-├── app.py                 # UI layer (Streamlit web application)
+├── app.py                 # Phase 5: UI layer (Streamlit web application)
 ├── requirements.txt       # Project dependencies
-├── setup.py               # Initial project setup & environment validation
+├── setup.py               # Phase 0 : Initial project setup & environment validation
 └── README.md
-```
-
-AI-Document-Assistant-using-RAG/
-│
-├── videos/                # Input video files (.mp4)
-├── audio/                 # Extracted audio files
-├── transcripts/           # Generated transcripts (.txt)
-├── embeddings/             # FAISS index and embeddings
-│   ├── faiss.index
-│   └── chunks.npy
-│
-├── ingest.py               # Phase 1: Video → Transcript
-├── embed_store.py          # Phase 2: Embedding & FAISS index creation
-├── retriever.py            # Phase 3: Semantic retrieval
-├── rag_pipeline.py         # Phase 4: RAG (Retriever + LLM)
-├── requirements.txt
-└── README.md
-
-````
+---
 
 ---
 
