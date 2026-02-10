@@ -1,54 +1,85 @@
-# Phase 05 UI Part 
 import streamlit as st
-import os
+import ollama
 from retriever import retrieve
-from openai import OpenAI
 
-st.set_page_config(page_title="AI Document Assistant", layout="centered")
+MODEL_NAME = "llama3"
 
-st.title("📄 AI Document Assistant (RAG)")
-st.write("Ask questions from your documents")
+# ---------------- Page Config ----------------
+st.set_page_config(
+    page_title="AI Document Assistant (RAG)",
+    layout="wide"
+)
 
+st.title("🤖 AI Document Assistant (RAG)")
+st.write("Ask questions from your documents using FAISS + LLaMA3 (Local & Free)")
+
+# ---------------- User Input ----------------
 query = st.text_input("Enter your question:")
 
-def generate_answer(query, chunks):
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-    context = "\n".join(chunks)
+def generate_answer(query, retrieved_chunks):
+    # Clean + limit context
+    cleaned_chunks = [
+        chunk.strip().replace("\n", " ")
+        for chunk in retrieved_chunks
+    ]
 
-    prompt = f"""
-You are an AI assistant.
-Answer the question using ONLY the context below.
+    context = "\n\n".join(cleaned_chunks)
 
+    response = ollama.chat(
+        model=MODEL_NAME,
+        messages=[
+            {
+                "role": "system",
+                "content": (
+                "You are a knowledgeable computer science tutor.\n"
+                "Answer the question using ONLY the given context.\n"
+                "Do NOT copy sentences directly from the context.\n"
+                "Rephrase the information in your own words.\n"
+                "Give a complete, clear explanation as if teaching a student.\n"
+                "Do NOT mention chunks or context.\n"
+                "If the answer is not present, say exactly: I don't know."
+                )
+            },
+            {
+                "role": "user",
+                "content": f"""
 Context:
 {context}
 
 Question:
 {query}
-
-Answer:
 """
-
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.3
+            }
+        ],
+        options={
+            "temperature": 0.2,
+            "top_p": 0.9,
+            "num_ctx": 4096
+        }
     )
 
-    return response.choices[0].message.content
+    return response["message"]["content"]
 
 
+# ---------------- Button Logic ----------------
 if st.button("Get Answer"):
     if not query.strip():
         st.warning("Please enter a question.")
     else:
-        with st.spinner("Retrieving answer..."):
-            chunks = retrieve(query)
+        with st.spinner("🔍 Retrieving relevant context..."):
+            retrieved_chunks = retrieve(query)
 
-            if not chunks:
-                st.error("No relevant context found.")
-            else:
-                answer = generate_answer(query, chunks)
-                st.success("Answer")
-                st.write(answer)
+        if not retrieved_chunks:
+            st.error("No relevant context found.")
+        else:
+            with st.spinner("🧠 Generating answer..."):
+                answer = generate_answer(query, retrieved_chunks)
 
+            st.subheader("🧠 Answer")
+            st.markdown(f"**{answer}**")
+
+            with st.expander("📄 Retrieved Context (For Debugging)"):
+                for i, chunk in enumerate(retrieved_chunks, 1):
+                    st.markdown(f"**Chunk {i}:**")
+                    st.write(chunk)

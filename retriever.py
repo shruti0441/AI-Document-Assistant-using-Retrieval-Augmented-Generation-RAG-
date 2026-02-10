@@ -16,11 +16,11 @@ index = faiss.read_index(os.path.join(EMBEDDINGS_DIR, "faiss.index"))
 chunks = np.load(os.path.join(EMBEDDINGS_DIR, "chunks.npy"), allow_pickle=True)
 
 
-def retrieve(query, top_k=5):
+def retrieve(query, top_k=3):
     if index.ntotal == 0:
         return []
 
-    query_embedding = model.encode([query], convert_to_numpy=True)
+    query_embedding = model.encode([query])
     distances, indices = index.search(query_embedding, top_k)
 
     results = []
