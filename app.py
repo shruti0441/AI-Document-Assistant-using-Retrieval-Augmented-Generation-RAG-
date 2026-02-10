@@ -4,7 +4,7 @@ from retriever import retrieve
 
 MODEL_NAME = "llama3"
 
-# ---------------- Page Config ----------------
+#  Page Config 
 st.set_page_config(
     page_title="AI Document Assistant (RAG)",
     layout="wide"
@@ -13,7 +13,7 @@ st.set_page_config(
 st.title("🤖 AI Document Assistant (RAG)")
 st.write("Ask questions from your documents using FAISS + LLaMA3 (Local & Free)")
 
-# ---------------- User Input ----------------
+# User Input 
 query = st.text_input("Enter your question:")
 
 
@@ -62,7 +62,7 @@ Question:
     return response["message"]["content"]
 
 
-# ---------------- Button Logic ----------------
+# Button Logic 
 if st.button("Get Answer"):
     if not query.strip():
         st.warning("Please enter a question.")
@@ -83,3 +83,4 @@ if st.button("Get Answer"):
                 for i, chunk in enumerate(retrieved_chunks, 1):
                     st.markdown(f"**Chunk {i}:**")
                     st.write(chunk)
+
