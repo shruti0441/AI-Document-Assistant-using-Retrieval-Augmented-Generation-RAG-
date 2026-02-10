@@ -200,11 +200,10 @@ streamlit run app.py
 ##  📎 Screenshots
 
 ### 🖥️ Streamlit User Interface
-![Streamlit UI](screenshots/App UI.png)
+![Streamlit UI](https://github.com/shruti0441/AI-Document-Assistant-using-Retrieval-Augmented-Generation-RAG-/blob/main/Screenshots/App%20UI.png)
 
 ### 🤖 AI Generated Answer
-![AI Answer](screenshots/AI Answer.png)
-https://github.com/shruti0441/AI-Document-Assistant-using-Retrieval-Augmented-Generation-RAG-/blob/main/UI%20sc.png
+![AI Answer](https://github.com/shruti0441/AI-Document-Assistant-using-Retrieval-Augmented-Generation-RAG-/blob/main/Screenshots/AI%20Answer.png)
 
 ## 👩‍💻 Author
 
