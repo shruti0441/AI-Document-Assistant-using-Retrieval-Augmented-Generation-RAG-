@@ -197,6 +197,10 @@ streamlit run app.py
 
 ---
 
+##  📎 Screenshots
+
+https://github.com/shruti0441/AI-Document-Assistant-using-Retrieval-Augmented-Generation-RAG-/blob/main/UI%20sc.png
+
 ## 👩‍💻 Author
 
 **Shruti Adsul**
