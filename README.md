@@ -84,19 +84,32 @@ LLaMA3 (Ollama) generates answers using retrieved context
 AI-Document-Assistant-using-RAG/
 │
 ├── videos/
+
 ├── audio/
+
 ├── transcripts/
+
 ├── embeddings/
+
 │ ├── faiss.index
+
 │ └── chunks.npy
+
 │
 ├── ingest.py
+
 ├── embed_store.py
+
 ├── retriever.py
+
 ├── rag_pipeline.py
+
 ├── app.py
+
 ├── requirements.txt
+
 ├── setup.py
+
 └── README.md
 
 
@@ -160,7 +173,7 @@ python setup.py
 ```
 Validates environment and folders.
 
----
+
 
 ## 🔹 Phase 1: Video to Text (Ingestion)
 
@@ -171,7 +184,7 @@ python ingest.py
 -Transcribes audio using Whisper
 -Saves transcript
 
----
+
 
 ## 🔹 Phase 2: Embedding & Vector Store Creation
 ``` bash
@@ -182,7 +195,7 @@ python embed_store.py
 -Generates embeddings
 -Stores vectors in FAISS
 
----
+
 
 ## 🔹 Phase 3: Semantic Retrieval (Testing)
 ``` bash
@@ -190,7 +203,7 @@ python retriever.py
 ```
 Tests similarity search.
 
----
+
 
 🔹 Phase 4: RAG Pipeline (LLM Answering)
 ```bash
@@ -200,7 +213,7 @@ python rag_pipeline.py
 -Sends context to LLaMA3 via Ollama
 -Generates AI answer
 
----
+
 
 🔹 Phase 5: Streamlit Web App
 ``` bash
@@ -212,40 +225,40 @@ Interactive UI to ask questions from documents.
 
 ## 📈 Results & Impact
 
-   Enables semantic search over unstructured video content.
-   Improves answer accuracy using context-awre retrieval.
-   Fully offline LLM execution (cost-efficient).
-   Demonstrates real-world RAG system architecture.
+   -Enables semantic search over unstructured video content.
+   -Improves answer accuracy using context-awre retrieval.
+   -Fully offline LLM execution (cost-efficient).
+   -Demonstrates real-world RAG system architecture.
 
 ---
 
 ## 📌 Use Cases
 
-   Educational video Q&A
-   Corporate training material search
-   Meeting & lecture summarization
-   Knowledge base assistant
+   -Educational video Q&A
+   -Corporate training material search
+   -Meeting & lecture summarization
+   -Knowledge base assistant
 
 ---
 
 ## 🔮 Future Enhancements
 
-  PDF & document support
-  Metadata filtering
-  Performance optimization
-  Docker deployment
-  Cloud deployment (optional)
+  -PDF & document support
+  -Metadata filtering
+  -Performance optimization
+  -Docker deployment
+  -Cloud deployment (optional)
 
 ---
 # 📎 Screenshots
 
 ## 🖥️ Streamlit User Interface
 
-![Streamlit UI](Screenshots/App UI.png)
+![Streamlit UI](Screenshots/App_UI.png)
 
 ## 🤖 AI Generated Answer
 
-![AI Answer](Screenshots/AI Answer.png)
+![AI Answer](Screenshots/AI_Answer.png)
 
 ---
 
