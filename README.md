@@ -254,7 +254,7 @@ Interactive UI to ask questions from documents.
 
 ## 🖥️ Streamlit User Interface
 
-![Streamlit UI](Screenshots/App_UI.png)
+![Streamlit UI](Screenshots/System_UI.png)
 
 ## 🤖 AI Generated Answer
 
