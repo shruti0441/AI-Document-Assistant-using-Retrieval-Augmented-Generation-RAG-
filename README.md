@@ -81,3 +81,206 @@ LLaMA3 (Ollama) generates answers using retrieved context
 ---
 
 ## 📂 Project Structure
+AI-Document-Assistant-using-RAG/
+│
+├── videos/
+├── audio/
+├── transcripts/
+├── embeddings/
+│ ├── faiss.index
+│ └── chunks.npy
+│
+├── ingest.py
+├── embed_store.py
+├── retriever.py
+├── rag_pipeline.py
+├── app.py
+├── requirements.txt
+├── setup.py
+└── README.md
+
+
+
+---
+
+# ⚙️ Installation & Setup
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/your-username/AI-Document-Assistant-using-RAG.git
+cd AI-Document-Assistant-using-RAG
+
+```
+## 2️⃣ Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+Activate:
+
+Windows
+```bash
+venv\Scripts\activate
+```
+
+Mac/Linux
+```bash
+source venv/bin/activate
+
+```
+## 3️⃣ Install Dependencies
+``` bash
+pip install -r requirements.txt
+```
+
+# 🤖 Install Ollama (Required for LLM)
+1. Download Ollama from: https://ollama.com
+
+2. Install and restart your system.
+
+3. Pull LLaMA3 model:
+
+ ```bash
+   ollama pull llama3
+```
+4. Verify installation:
+   
+```bash
+ollama list
+```
+
+---
+
+# ▶️ How to Run (Phase-wise Execution)
+
+## 🔹 Step 0: Initial Setup
+``` bash
+python setup.py
+```
+Validates environment and folders.
+
+---
+
+## 🔹 Phase 1: Video to Text (Ingestion)
+
+``` bash
+python ingest.py
+```
+-Converts video to audio
+-Transcribes audio using Whisper
+-Saves transcript
+
+---
+
+## 🔹 Phase 2: Embedding & Vector Store Creation
+``` bash
+python embed_store.py
+```
+
+-Splits transcript into chunks
+-Generates embeddings
+-Stores vectors in FAISS
+
+---
+
+## 🔹 Phase 3: Semantic Retrieval (Testing)
+``` bash
+python retriever.py
+```
+Tests similarity search.
+
+---
+
+🔹 Phase 4: RAG Pipeline (LLM Answering)
+```bash
+python rag_pipeline.py
+```
+-Retrieves top-k context
+-Sends context to LLaMA3 via Ollama
+-Generates AI answer
+
+---
+
+🔹 Phase 5: Streamlit Web App
+``` bash
+streamlit run app.py
+```
+Interactive UI to ask questions from documents.
+
+---
+
+## 📈 Results & Impact
+
+   Enables semantic search over unstructured video content.
+   Improves answer accuracy using context-awre retrieval.
+   Fully offline LLM execution (cost-efficient).
+   Demonstrates real-world RAG system architecture.
+
+---
+
+## 📌 Use Cases
+
+   Educational video Q&A
+   Corporate training material search
+   Meeting & lecture summarization
+   Knowledge base assistant
+
+---
+
+## 🔮 Future Enhancements
+
+  PDF & document support
+  Metadata filtering
+  Performance optimization
+  Docker deployment
+  Cloud deployment (optional)
+
+---
+# 📎 Screenshots
+
+## 🖥️ Streamlit User Interface
+Screenshots/AI Answer.png
+
+## 🤖 AI Generated Answer
+Screenshots/App UI.png
+
+---
+
+# 👩‍💻 Author
+
+Shruti Adsul
+Aspiring Data Analyst | ML & LLM Enthusiast
+
+---
+
+# ⭐ Support
+
+If you found this project helpful:
+
+---
+
+# ⭐ Star the repository
+🍴 Fork it
+💬 Share feedback
+---
+
+If you want, I can now:
+
+- 🔥 Optimize this for **top MNC-level portfolio**
+- 💼 Convert this into **resume-ready project description**
+- 🚀 Write a powerful LinkedIn post for this updated Ollama version**
+
+Just tell me what you want next.
+
+
+
+
+
+
+
+
+
+
+
+
