@@ -240,10 +240,12 @@ Interactive UI to ask questions from documents.
 # 📎 Screenshots
 
 ## 🖥️ Streamlit User Interface
-Screenshots/AI Answer.png
+
+![Streamlit UI](Screenshots/App UI.png)
 
 ## 🤖 AI Generated Answer
-Screenshots/App UI.png
+
+![AI Answer](Screenshots/AI Answer.png)
 
 ---
 
