@@ -242,7 +242,10 @@ Interactive UI to ask questions from documents.
 
 ## 🖥️ Streamlit User Interface
 
+
 ![Streamlit UI](Screenshots/System_UI.png)
+
+
 
 ## 🤖 AI Generated Answer
 
@@ -253,6 +256,7 @@ Interactive UI to ask questions from documents.
 # 👩‍💻 Author
 
 Shruti Adsul
+
 Aspiring Data Analyst | ML & LLM Enthusiast
 
 ---
