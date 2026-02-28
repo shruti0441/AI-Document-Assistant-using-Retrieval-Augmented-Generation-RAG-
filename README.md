@@ -82,34 +82,22 @@ LLaMA3 (Ollama) generates answers using retrieved context
 
 ## 📂 Project Structure
 AI-Document-Assistant-using-RAG/
+
+
 │
 ├── videos/
-
 ├── audio/
-
 ├── transcripts/
-
 ├── embeddings/
-
 │ ├── faiss.index
-
 │ └── chunks.npy
-
-│
 ├── ingest.py
-
 ├── embed_store.py
-
 ├── retriever.py
-
 ├── rag_pipeline.py
-
 ├── app.py
-
 ├── requirements.txt
-
 ├── setup.py
-
 └── README.md
 
 
@@ -269,24 +257,9 @@ Aspiring Data Analyst | ML & LLM Enthusiast
 
 ---
 
-# ⭐ Support
 
-If you found this project helpful:
 
----
 
-# ⭐ Star the repository
-🍴 Fork it
-💬 Share feedback
----
-
-If you want, I can now:
-
-- 🔥 Optimize this for **top MNC-level portfolio**
-- 💼 Convert this into **resume-ready project description**
-- 🚀 Write a powerful LinkedIn post for this updated Ollama version**
-
-Just tell me what you want next.
 
 
 
