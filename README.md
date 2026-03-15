@@ -83,6 +83,7 @@ LLaMA3 (Ollama) generates answers using retrieved context
 ## 📂 Project Structure
 AI-Document-Assistant-using-RAG/
 
+---
 
 │
 ├── videos/
