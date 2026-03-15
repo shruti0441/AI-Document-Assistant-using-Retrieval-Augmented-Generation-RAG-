@@ -81,24 +81,36 @@ LLaMA3 (Ollama) generates answers using retrieved context
 ---
 
 ## 📂 Project Structure
+
 AI-Document-Assistant-using-RAG/
-
----
-
 │
+
 ├── videos/
+
 ├── audio/
+
 ├── transcripts/
+
 ├── embeddings/
+
 │ ├── faiss.index
+
 │ └── chunks.npy
+
 ├── ingest.py
+
 ├── embed_store.py
+
 ├── retriever.py
+
 ├── rag_pipeline.py
+
 ├── app.py
+
 ├── requirements.txt
+
 ├── setup.py
+
 └── README.md
 
 
